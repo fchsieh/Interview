@@ -32,6 +32,7 @@ void c_style_free(int **a, int n) {
 }
 
 int main() {
+    // allocates a 2D array of size 10x10
     int **cpp = cpp_style_alloc(10);
     int **c = c_style_alloc(10);
 

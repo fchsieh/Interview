@@ -55,6 +55,8 @@ class HashMap {
 };
 
 int main() {
+    // implementation of a hash map with template
+
     HashMap<string, int> *table = new HashMap<string, int>(10);
     table->insert("hello", 1);
     cout << table->get("hello") << endl;
