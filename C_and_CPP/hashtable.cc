@@ -59,21 +59,21 @@ int main() {
 
     HashMap<string, int> *table = new HashMap<string, int>(10);
     table->insert("hello", 1);
-    cout << table->get("hello") << endl;
+    cout << table->get("hello") << endl;  // 1
     table->insert("world", 2);
     table->insert("hello", 3);
-    cout << table->get("world") << endl;
-    cout << table->get("hello") << endl;
+    cout << table->get("world") << endl;  // 2
+    cout << table->get("hello") << endl;  // 3
     table->remove("hello");
-    cout << table->get("hello") << endl;
+    cout << table->get("hello") << endl;  // -1 (not found)
 
     HashMap<int, int> *table2 = new HashMap<int, int>(10);
     table2->insert(1, 123);
     table2->insert(2, 456);
-    cout << table2->get(1) << endl;
-    cout << table2->get(3) << endl;
+    cout << table2->get(1) << endl;  // 123
+    cout << table2->get(3) << endl;  // -1 (not found)
     table2->insert(1, 222);
-    cout << table2->get(1) << endl;
+    cout << table2->get(1) << endl;  // 222
 
     return 0;
 }
